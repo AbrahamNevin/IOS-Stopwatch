@@ -1,42 +1,70 @@
-# IOS-Stopwatch
-📘 File Overview
-File Name: ViewController.swift
-Project Name: stopWatch
-Created by: SDC-USER on 05/08/25
-Purpose: This is the main screen logic for a stopwatch app.
+🕒 StopWatch App – ViewController.swift Overview
+This file defines the main logic for a simple stopwatch app using UIKit.
+
+📁 File Information
+* File: ViewController.swift
+* Target: stopWatch
+* Created by: SDC-USER
+* Date: 05/08/25
+
 📦 Imports
+swift
+Copy code
 import UIKit
-UIKit: The core framework for building iOS user interfaces.
-🧱 Class Definition
+* UIKit is used for UI elements like UILabel, UIButton, etc.
+
+🧠 Class Definition
+swift
+Copy code
 class ViewController: UIViewController
-ViewController is a subclass of UIViewController.
-It controls the main stopwatch screen.
-🎯 Outlets
+* Subclass of UIViewController
+* Controls the stopwatch screen logic
+
+🔌 IBOutlets
+swift
+Copy code
 @IBOutlet weak var sLabel: UILabel!
 @IBOutlet weak var mLabel: UILabel!
-sLabel: Displays seconds.
-mLabel: Displays minutes.
-@IBOutlet: Connects UI labels from storyboard to code.
-🚀 viewDidLoad
-override func viewDidLoad()
-Called when the view loads.
-Currently only runs the default setup.
-⏯️ Button Actions
-▶️ Start Button
-@IBAction func startButton(_ sender: Any)
-Resets both minute and second labels to "00".
-Doesn't start a timer yet — just sets the UI.
-⏹️ Stop Button
-@IBAction func stopButton(_ sender: Any)
-Empty for now — meant to stop the timer.
-🔁 Restart Button
-@IBAction func restartButton(_ sender: Any)
-Also resets both labels to "00".
-📌 Notes Summary
-Element	Purpose
-UILabel outlets	Show time in minutes and seconds
-startButton	Resets labels to "00"
-stopButton	Placeholder for stop logic
-restartButton	Also resets time display to zero
-viewDidLoad	Initial setup when screen appears
+* sLabel: Displays seconds (e.g., "00")
+* mLabel: Displays minutes (e.g., "00")
+* Connected to labels in the Storyboard via Interface Builder
 
+🚦 View Lifecycle
+swift
+Copy code
+override func viewDidLoad()
+* Called after the view controller has loaded into memory
+* Currently used for setup (if needed)
+
+🕹️ Button Actions
+▶️ startButton
+swift
+Copy code
+@IBAction func startButton(_ sender: Any)
+* Resets both minute and second labels to "00"
+* Does not start a timer (just a placeholder for now)
+⏹️ stopButton
+swift
+Copy code
+@IBAction func stopButton(_ sender: Any)
+* Empty method – to be implemented for stopping the timer
+🔁 restartButton
+swift
+Copy code
+@IBAction func restartButton(_ sender: Any)
+* Resets both mLabel and sLabel to "00"
+
+📌 Summary Table
+Component	Type	Purpose
+sLabel	UILabel	Displays seconds
+mLabel	UILabel	Displays minutes
+startButton	IBAction	Resets time display to zero
+stopButton	IBAction	Placeholder to stop the timer
+restartButton	IBAction	Resets time display to zero
+viewDidLoad	Lifecycle	Prepares view after loading
+
+✅ Next Steps (For Future Updates)
+* Add a working Timer instance
+* Track elapsed seconds and minutes
+* Implement start, pause, and reset functionality
+* Add UI animations or haptic feedback
